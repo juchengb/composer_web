@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- 問題區
+ 1. 中文字型無法匯入和正確顯示
+ 2. 第三段實驗電影段落的邊界怪怪ㄉ，怎麼調QQ
+ 3. header置中？？ 跟下面的code有什麼差別？
+ 4. 如果要導回首頁，應該放網頁的網址還是檔案比較好（？）
+-->
+
+<!-- header???
+    
+    <div
+        class="relative isolate flex justify-center items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+        <div class="flex flex-wrap items-center gap-x-2 gap-y-2">
+            <a href="https://anniwei.com" class="text-sm leading-6 text-gray-900 text-center">
+                <span style="font-family: 'ChenYuluoyan-Thin', sans-serif;">魏安妮</span><br>
+                <span class="julius-sans-one-regular">An-Ni Wei | Composer</span>
+            </a>
+        </div>
+    </div>
+-->
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Wei An-Ni Music</title>
+    <!-- Google字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Julius+Sans+One&family=LXGW+WenKai+TC&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <style>
+        .julius-sans-one-regular {
+            font-family: "Julius Sans One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "ChenYuluoyan-Thin", sans-serif;
+            src: url('fonts/ChenYuluoyan-Thin.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Julius Sans One", sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
     <!-- HEADER NAME -->
-    <div
-        class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
-        <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <p class="text-sm leading-6 text-gray-900">
-                <strong class="font-semibold text-center">魏安妮<br>An-Ni Wei | Composer</strong>
-            </p>
+    <header class="bg-gray-50 py-2.5 sm:py-3.5">
+        <div class="max-w-7xl mx-auto flex justify-center items-center">
+            <div class="text-center">
+                <a href="https://anniwei.com" class="text-l leading-6 text-gray-900 hover:text-[#54533B]">
+                    <span style="font-family: 'ChenYuluoyan-Thin', sans-serif;">魏安妮</span><br>
+                    <span class="julius-sans-one-regular">An-Ni Wei | Composer</span>
+                </a>
+            </div>
         </div>
-    </div>
+    </header>
+
 
     <!-- NAVBAR -->
     <nav class="bg-gray-800">
@@ -43,7 +90,7 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
                     <div class="flex flex-shrink-0 items-center">
                         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                             alt="Your Company">
@@ -81,77 +128,252 @@
         </div>
     </nav>
 
-    <!-- SELECTED TRACKS -->
+    <!-- Compositions -->
     <div class="bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-                <h2 class="text-2xl font-bold text-gray-900">CONCERT MUSIC</h2>
+                
+                <!-- Group of Concert Music -->
+                <div class="bg-gray-100 mx-auto max-w-7xl mt-6 space-y-12">
+                    <h2 class="text-3xl font-thin tracking-wide text-gray-900">CONCERT MUSIC</h2>
+                        
+                        <!-- The First Group -->
+                        <div class="grid lg:grid-cols-3 lg:gap-x-6">
+                            <div class="group relative">
+                                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://youtu.be/q-X5aCK0fas?si=yZzneLGtkyhIyjJ1" target="_blank">
+                                        <img src="img/index/jeremy-perkins-UgNjyPkphtU-unsplash.jpg"
+                                            alt="An orange light trail in the shape of a circle, captured with a slow shutter speed on a black background."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://youtu.be/q-X5aCK0fas?si=yZzneLGtkyhIyjJ1" target="_blank">Staring Into The
+                                        Light<br>Orchestra</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">黑洞⎟為管弦樂</p>
+                            </div>
 
-                <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-                    <div class="group relative">
-                        <div
-                            class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <a href="https://youtu.be/q-X5aCK0fas?si=yZzneLGtkyhIyjJ1" target="_blank">
-                                <img src="img/index/jeremy-perkins-UgNjyPkphtU-unsplash.jpg"
-                                    alt="An orange light trail in the shape of a circle, captured with a slow shutter speed on a black background."
-                                    class="h-full w-full object-cover object-center">
-                            </a>
-                        </div>
-                        <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="https://youtu.be/q-X5aCK0fas?si=yZzneLGtkyhIyjJ1" target="_blank">Staring Into The Light <br> 
-                                Orchestra</a>
-                                <!-- 我想要換行怎麼搞？ -->
-                        </h3>
-                        <p class="text-base font-semibold text-gray-900">黑洞⎟為管弦樂</p>
-                    </div>
-                    <div class="group relative">
-                        <div
-                            class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <a href="https://on.soundcloud.com/bockRkz9ANh1oJDK7" target="_blank">
-                                <img src="img/index/diego-ph-SZYreZsJ-fE-unsplash.jpg"
-                                    alt="Hands holding a string of lights against a blue sky."
-                                    class="h-full w-full object-cover object-center">
-                            </a>
-                        </div>
-                        <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="https://on.soundcloud.com/bockRkz9ANh1oJDK7" target="_blank">Fathom
-                                Clarinet and marimba Duet</a>
-                                <!-- 我想要換行怎麼搞？ -->
-                        </h3>
-                        <p class="text-base font-semibold text-gray-900">捉摸⎟雙簧管和馬林巴琴 二重奏</p>
-                    </div>
-                    <div class="group relative">
-                        <div
-                            class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <a href="https://on.soundcloud.com/AnaQWdED1Dcvukh58" target="_blank">
-                                <img src="img/index/photo-1610643781442-ec645d94c89b.jpeg"
-                                    alt="Fireworks exploding in the night sky."
-                                    class="h-full w-full object-cover object-center">
-                            </a>
-                        </div>
-                        <h3 class="mt-6 text-sm text-gray-500">
-                            <a href="https://on.soundcloud.com/AnaQWdED1Dcvukh58" target="_blank">Firework Of Honey Chamber Orchestra</a>
-                        </h3>
-                        <p class="text-base font-semibold text-gray-900">蜂蜜花火⎟為管弦室內樂</p>
-                    </div>
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/bockRkz9ANh1oJDK7" target="_blank">
+                                        <img src="img/index/diego-ph-SZYreZsJ-fE-unsplash.jpg"
+                                            alt="Hands holding a string of lights against a blue sky."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/bockRkz9ANh1oJDK7" target="_blank">Fathom<br>Clarinet and marimbaDuet</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">捉摸⎟雙簧管和馬林巴琴 二重奏</p>
+                            </div>
 
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/AnaQWdED1Dcvukh58" target="_blank">
+                                        <img src="img/index/photo-1610643781442-ec645d94c89b.jpeg"
+                                            alt="Fireworks exploding in the night sky."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/AnaQWdED1Dcvukh58" target="_blank">Firework Of Honey
+                                        Chamber<br>Orchestra</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">蜂蜜花火⎟為管弦室內樂</p>
+                            </div>
+                        </div>
+
+                        <!-- The Second Group -->
+                        <div class="grid lg:grid-cols-3 lg:gap-x-6">
+                            <div class="group relative">
+                                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/i7JkUu3yfdeCuwds5" target="_blank">
+                                        <img src="img/index/Screenshot 2024-07-03 at 3.06.43 AM.png"
+                                            alt="A view of Taipei 101 in Taipei, Taiwan, seen from a narrow street lined with older buildings and various shop signs. The sky is overcast, casting a muted tone over the scene."
+                                            class="h-full w-full object-cover object-top">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/i7JkUu3yfdeCuwds5" target="_blank">Psychedelic Taipei<br>Clarinet and Piano Duet</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">氤氳台北⎟ 為單簧管和鋼琴二重奏</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/HcS7M6EXJmWmpezP8" target="_blank">
+                                        <img src="img/composition/adam-wilson-wCKzi8nDkw8-unsplash.jpg"
+                                            alt="A man stand in front of fire."
+                                            class="h-full w-full object-cover object-bottom">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/HcS7M6EXJmWmpezP8" target="_blank">White Terror<br>Flute, Cello, Percussion, and Piano</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">白色恐怖⎟為長笛、大提琴、打擊樂與鋼琴</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://youtu.be/qiQLLC7gMJc?si=30BHjpvBujSAmSl9" target="_blank">
+                                        <img src="img/composition/kumiko-shimizu-_PshNniKRy8-unsplash.jpg"
+                                            alt="Fireworks exploding in the night sky."
+                                            class="h-full w-full object-cover object-bottom">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://youtu.be/qiQLLC7gMJc?si=30BHjpvBujSAmSl9" target="_blank">The Moments<br>Clarinet, Trumpet, and Piano</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">時刻⎟為單簧管、小號
+                                    和鋼琴三重奏</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Group of Electroacoustic Music -->
+                <div class="bg-gray-100 mx-auto max-w-7xl mt-6 space-y-12">
+                    <h2 class="text-3xl font-thin tracking-wide text-gray-900">ELECTROACOUSTIC MUSIC</h2>
+                        
+                        <!-- The First Group -->
+                        <div class="grid lg:grid-cols-3 lg:gap-x-6">
+                            <div class="group relative">
+                                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/ZPDnVzTBZaH7DA6D6" target="_blank">
+                                        <img src="img/index/IMG_1660.JPG"
+                                            alt="An orange light trail in the shape of a circle, captured with a slow shutter speed on a black background."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/ZPDnVzTBZaH7DA6D6" target="_blank">Soundscape Taiwan – Train Trip<br>@ Mt.Ali </a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>火車之旅⎟嘉義 阿里山</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/8i9u69TFoukjbmkLA" target="_blank">
+                                        <img src="img/index/IMG_1865.JPG"
+                                            alt="Hands holding a string of lights against a blue sky."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/8i9u69TFoukjbmkLA" target="_blank">Soundscape Taiwan – Daydream<br>@ Taitung</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>白日夢⎟台東</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/2YUXcxVRHUfc7LhA7" target="_blank">
+                                        <img src="img/index/IMG_2138.JPG"
+                                            alt="Fireworks exploding in the night sky."
+                                            class="h-full w-full object-cover object-top">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/2YUXcxVRHUfc7LhA7" target="_blank">Soundscape Taiwan – Farewell<br>@ Malungayangay Beach, Hualien</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>再會⎟花蓮 七星潭</p>
+                            </div>
+                        </div>
+
+                        <!-- The Second Group -->
+                        <div class="grid lg:grid-cols-3 lg:gap-x-6">
+                            <div class="group relative">
+                                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/uD7z6X4ZkpzUq98Y8" target="_blank">
+                                        <img src="img/composition/DSCF5147.JPG"
+                                            alt="An orange light trail in the shape of a circle, captured with a slow shutter speed on a black background."
+                                            class="h-full w-full object-cover object-top">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/uD7z6X4ZkpzUq98Y8" target="_blank">Soundscape Taiwan – Night Market<br>@ Keelung MiaoKou Night Market</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>廟口夜市⎟基隆</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/Hi5qixvvJabtD2Qu6" target="_blank">
+                                        <img src="img/composition/DSCF5573.JPG"
+                                            alt="Hands holding a string of lights against a blue sky."
+                                            class="h-full w-full object-cover object-bottom">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/Hi5qixvvJabtD2Qu6" target="_blank">Soundscape Taiwan – Sleepwalking at a midnight Fish Market<br>@ Kanziding Fish Market, Keelung City </a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>夢遊深夜魚市⎟基隆 崁仔頂魚市</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://on.soundcloud.com/bMGzDE8ZMEXPauRA6" target="_blank">
+                                        <img src="img/composition/DSCF5085.JPG"
+                                            alt="Fireworks exploding in the night sky."
+                                            class="h-full w-full object-cover object-top">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://on.soundcloud.com/bMGzDE8ZMEXPauRA6" target="_blank">Soundscape Taiwan – Port side<br>@ the port of Heping Island, Keelung City</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">《聲歷臺灣輿圖》計畫<br>港邊⎟基隆 和平島港邊造船廠</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+                <!-- Group of Experimental Films -->
+                <div class="bg-gray-100 mx-auto max-w-7xl mt-6 space-y-12">
+                    <h2 class="text-3xl font-thin tracking-wide text-gray-900">EXPERIMENTAL FILMS</h2>
+                        
+                        <!-- The First Group -->
+                        <div class="grid lg:grid-cols-3 lg:gap-x-6">
+                            <div class="group relative">
+                                <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://youtu.be/Nun8QkmVruM?si=J0eZBN7mV4kf9tlA" target="_blank">
+                                        <img src="img/index/s2.jpg"
+                                            alt="An orange light trail in the shape of a circle, captured with a slow shutter speed on a black background."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://youtu.be/Nun8QkmVruM?si=J0eZBN7mV4kf9tlA" target="_blank">A solitude quartet<br>experimental Dance film</a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">孤獨四重奏⎟實驗舞蹈短片<br>配樂／共同導演</p>
+                            </div>
+
+                            <div class="group relative">
+                                <div
+                                    class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+                                    <a href="https://youtu.be/Qhr8IfYo1_I?si=_PMNw9RIHbNquASf" target="_blank">
+                                        <img src="img/index/Screenshot 2024-06-17 at 3.40.56 AM.png"
+                                            alt="Hands holding a string of lights against a blue sky."
+                                            class="h-full w-full object-cover object-center">
+                                    </a>
+                                </div>
+                                <h3 class="mt-6 text-sm text-gray-500">
+                                    <a href="https://youtu.be/Qhr8IfYo1_I?si=_PMNw9RIHbNquASf" target="_blank">Rabbit Hole<br>Directed by Kuo-Hao Li </a>
+                                </h3>
+                                <p class="text-base font-light text-gray-900">兔子洞⎟實驗短片<br>導演 李國豪</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="bg-white">
-        <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <a href="https://on.soundcloud.com/7Vpqpr5F2Mpo7bgf8">
-                    <img src="https://i1.sndcdn.com/artworks-UsKyCVzxdXJSRZjF-3FUq0g-t500x500.jpg"
-                        alt="" class="h-60 w-full object-cover object-center">
-                <div class="px-6 py-4">
-                    <p class="text-gray-700 text-base">Soundscape Taiwan - Train Trip @Mt.Ali</p>
-                    <div class="font-bold text-l mb-2">《聲歷臺灣輿圖》計畫 火車之旅 | 嘉義阿里山</div>
-                </div>
-            </a>
-            </div>
-
         </div>
     </div>
 
